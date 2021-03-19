@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+<!-- 배열 1 -->
+<!--
+myArray = new Array()
+myArray[0] = "이수일";
+myArray[1] = "심순애";
+myArray[2] = "이몽룡";
+myArray[3] = "성춘향";
+document.write("첫번째 배열값은 ==> " + myArray[0] + "입니다<br>");
+document.write("두번째 배열값은 ==> " + myArray[1] + "입니다<br>");
+document.write("세번째 배열값은 ==> " + myArray[2] + "입니다<br>");
+document.write("네번째 배열값은 ==> " + myArray[3] + "입니다<br>");
+//-->
+
+<!-- 배열 2 -->
+<!--
+myArray = new Array("이수일", "심순애", "이몽룡", "성춘향")
+document.write("첫번째 배열값은 ==> " + myArray[0] + "입니다<br>");
+document.write("두번째 배열값은 ==> " + myArray[1] + "입니다<br>");
+document.write("세번째 배열값은 ==> " + myArray[2] + "입니다<br>");
+document.write("네번째 배열값은 ==> " + myArray[3] + "입니다<br>");
+//-->
+
+
+<!-- 배열 - length 속성 -->
+<!--
+myArray = new Array("이수일", "심순애", "이몽룡", "성춘향")
+document.write("배열의 개수는 ==> " myArray.length + " 개 입니다<br>");
+//-->
+
+<!-- 배열 - join 속성 -->
+<!--
+myArray = new Array("이수일", "심순애", "이몽룡", "성춘향")
+document.write("콤마로 배열값 연결하여 하나의 문자열 만들기 ==> " + myArray.join() + "<br>");
+document.write("and라는 문자열로 배열값 연결하기 ==> " + myArray.join(" and ") + "<br>");
+document.write("~라는 부호로 배열값 연결하기 ==> " + myArray.join(" ~ ") + "<br>");
+//-->
+
+<!-- 배열 - reverse 속성 -->
+<!--
+myArray = new Array("이수일", "심순애", "이몽룡", "성춘향")
+myArray = myArray.reverse();
+document.write("첫번째 배열값은 ==> " + myArray[0] + "입니다<br>");
+document.write("두번째 배열값은 ==> " + myArray[1] + "입니다<br>");
+document.write("세번째 배열값은 ==> " + myArray[2] + "입니다<br>");
+document.write("네번째 배열값은 ==> " + myArray[3] + "입니다<br>");
+//-->
+
+<!-- 배열 - sort() 속성 -->
+<!--
+myArray = new Array("이수일", "심순애", "이몽룡", "성춘향")
+myArray = myArray.sort();
+document.write("sort() 메소드로 정렬하기 ==> " + myArray.join() + "<br>");
+//-->
+
+<!-- 배열 - slice() 속성 -->
+<!--
+myArray = new Array("이수일", "심순애", "이몽룡", "성춘향")
+myArray2 = myArray.slice(1, 3);
+document.write("원래의 배열값 ==> " + myArray.join() + "<br>");
+document.write("slice() 메소드로 새로만든 배열 ==> " + myArray2.join() + "<br>");
+//-->
+
+<!-- concat() 메소드 -->
+<!--
+myArray = new Array("이수일", "심순애", "이몽룡", "성춘향")
+myArray2 = new Array("Korea", "Japan", "America", "China")
+myArray3 = new Array.concat(myArray2)
+document.write("첫번째 배열 ==> " + myArray.join() + "<br>");
+document.write("두번째 배열 ==> " + myArray2.join() + "<br>");
+document.write("세번째 배열 ==> " + myArray3.join() + "<br>");
+//-->
+
+<!-- Date() 객체 -->
+<!--
+now = new Date();	year = now.getYear();	month = (now.getMonth()+1);
+date = now.getDate();
+today = "오늘은 " + year + " 년 " + month + " 월" + date + " 일 입니다";
+document.write(today);
+//-->
+
+<!-- Date() 객체 - Array() 배열을 이용 -->
+<!--
+now = new Date();	year = now.getYear();	month = (now.getMonth()+1);
+date = now.getDate();
+week = new Array("일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일");
+weekday = week[now.getDay()];
+today = "오늘은 " + year + " 년 " + month + " 월" + date + " 일 " weekday + " 입니다";
+document.write(today);
+//-->
+
+<!-- Date() 객체 - if ~ else문 이용 -->
+<!--
+now = new Date();	hour = now.getHours();	min = now.getMinutes();
+var ampm;
+if (now.getHours() <= 12) {
+	ampm = "오전";
+} else {
+	ampm = "오후";
+}
+now_time = "지금은 " + ampm + ", " + hour + "시 " + min + " 분 입니다";
+document.write(now_time);
+//-->
+
+<!-- Date() 객체 - getTime() 메소드 -->
+<!--
+now = new Date();	dDay = new Date(2015,1,1);	now2 = new getTime();	dDay2 = new dDay.getTime();
+count = dDay2 - now2;
+count = Math.floor(count/(24*3600*1000));
+document.write("2015년까지 남은 일수는 " + count + " 일 입니다");
+//-->
+<!-- Math.random() 메소드-->
+<!--
+message = new Array();
+message[0] = "아는 길도 물어가라";
+message[1] = "천리길도 한걸음부터";
+message[2] = "세살버릇 여든간다";
+message[3] = "바늘도둑이 소도둑 된다";
+message[4] = "낫놓고 기역자도 모른다";
+random_message = Math.floor(Math.random()*5);
+random_message = message[random_message];
+document.write(random_message);
+//-->
+
+<!-- screen 속성 -->
+<!--
+document.write("screen.height ===> " + screen.height + "<br>");
+document.write("screen.width ===> " + screen.width + "<br>");
+document.write("screen.availheight ===> " + screen.availheight + "<br>");
+document.write("screen.availwidth ===> " + screen.availwidth + "<br>");
+document.write("screen.pixelDepth ===> " + screen.pixelDepth + "<br>");
+document.write("screen.colorDepth ===> " + screen.colorDepth + "<br>");
+//-->
+
+<!-- 팝업 윈도우를 화면에 가운데에 나타나게 하는 예제 -->
+<!--
+function popWin(mypage, myname, w, h, scroll) {
+	var winl = (screen.width - w) / 2;
+	var wint = (screen.height - h) / 2;
+	winprops = 'height=' + h + '. width=' + w + ', top=' + wint + ',left=' + winl + ',scrollbars=' + scroll + ',resizable'
+	win = window.open(mypage, myname, winprops)
+}
+//-->
+
+
+<!-- Function 객체 -->
+<!--
+result = new Function("a", "b", "c", "d", "return a * b * c * d");
+document.write("5 * 6 * 7 * 8 ===> " + result(5, 6, 7, 8) + " 입니다<br><br>");
+document.write("매개변수의 갯수는 ===> " + result.length + " 입니다<br>")"
+document.write("매개변수의 갯수는 ===> " + result.arity + " 입니다<br>")"
+//-->
+
+<!-- Function 객체 - 생성자 사용하는 예제 -->
+<!--
+x = new Number("5");
+document.write("숫자형 문자 5를 변환하면 ==>" + x + "<br>")
+y = new Number("A");
+document.write("알파벳 문자 A를 변환하면 ==>" + x + "<br>")
+//-->
+
+<!-- Function 객체 - 숫자를 2진수 값으로 변환하기 위해 toString()메소드를 사용한 예제 -->
+<!--
+x = 1234
+binary_value =  x.toString(2);
+document.write(binary_value);
+//-->
+
+<!-- Boolean 객체 -->
+<!--
+A = new Boolean(true);
+B = new Boolean(false);
+document.write("A: " + A + "<br>");
+document.write("B: " + B + "<br>");
+document.write("A == true : " + (A == true) + "<br>");
+document.write("A == false : " + (A == false) + "<br>");
+document.write("B == true : " + (B == true) + "<br>");
+document.write("B == false : " + (B == false) + "<br>");
+//-->
+
+<!-- 사용자 정의 객체 1 -->
+<!--
+function myFunction() {
+	this.name;	this.id;	this.nick_name;	this.addr;	this.hobby;
+}
+myObj = new myFunction();
+myObj.name = "홍길동";	myObj.id = "gilDong";
+myObj.nick_name = "길동이"	myObj.addr = "서울특별시";	myObj.hobby = "낚시";
+document.write("이름: " + myObj.name + "<br>");
+document.write("아이디: " + myObj.id + "<br>");
+document.write("별명: " + myObj.nick_name + "<br>");
+document.write("주소: " + myObj.addr + "<br>");
+document.write("취미: " + myObj.hobby + "<br>");
+//-->
+
+<!-- 사용자 정의 객체 2 -->
+<!--
+function myFunction() {
+	this.name = a;	this.id = b;	this.nick_name = c;	this.addr = d;	this.hobby = e;
+}
+myObj = new myFunction("홍길동", "gilDong", "길동이", "서울특별시", "낚시");
+document.write("이름: " + myObj.name + "<br>");
+document.write("아이디: " + myObj.id + "<br>");
+document.write("별명: " + myObj.nick_name + "<br>");
+document.write("주소: " + myObj.addr + "<br>");
+document.write("취미: " + myObj.hobby + "<br>");
+//-->
+
+<!-- 객체 제어 명령문 - for ~ in문 1 -->
+<!--
+for(var test in document) {
+	document.write("<font color=blue>" + test + "</font> : " + document[test] + "<br>");
+}
+//-->
+
+<!-- 객체 제어 명령문 - for ~ in문 2 -->
+<!--
+function Profile(a, b, c) {
+	this.Name = a;
+	this.Age = b;
+	this.Hobby = c;
+}
+myProfile = new Profile("홍길동", "27", "낚시")
+for(P in myProfile) {
+	document.write(P + "<br>")
+}
+document.write("<p>");
+for(P in myProfile) {
+	document.write(P + " : " + myProfile[P] + "<br>")
+}
+//-->
+
+<!-- with 명령문 -->
+<!--
+with(document) {
+	write("with 명령문을 사용하면<br>");
+	write("반복 사용할 특정객체를<br>");
+	write("여러번 사용하지 않고도<br>");
+	write("편리하게 사용할 수 있습니다<br>");
+}
+//-->
+</script>
+</head>
+<body>
+<!-- 팝업 윈도우를 화면에 가운데에 나타나게 하는 예제 -->
+<a href="#" onclick="popWin('http://www.naver.com', 'name', '400', '400', 'yes');">Jin의 Java Club</a>
+</body>
+</html>

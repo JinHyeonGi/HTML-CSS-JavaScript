@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+<!-- Navagator 객체 -->
+<!--
+document.write("navigator.appCodeName ==> ", navigator.appCodeName , "<br>");
+document.write("navigator.appName ==> ", navigator.appName , "<br>");
+document.write("navigator.appVersion ==> ", navigator.appVersion , "<br>");
+document.write("navigator.userAgent ==> ", navigator.userAgent , "<br>");
+document.write("navigator.platform ==> ", navigator.platform , "<br>");
+document.write("사용중인 언어는 ==> ", navigator.language , "<br>");
+document.write("Mime Type 의 갯수는 ==> ", navigator.mimeTypes.length , "<br>");
+document.write("설치된 플러그인의 갯수는 ==> ", navigator.plugins.length , "<br>");
+if(navigator.JavaEnabled == true) {
+	document.write("자바사용이 가능한 브라우저 입니다<br>");
+} else {
+	document.write("자바사용이 불가능한 상태입니다<br>");
+}
+//-->
+
+<!-- window.open() 1 -->
+<!--
+window.open("http://www.naver.com", "naver", "width=500, height=300, left=0, top=0. resizable=no")
+//-->
+
+<!-- window.open() 2 -->
+<!--
+function winOpen() {
+	window.open("http://www.naver.com", "naver");	
+}
+//-->
+
+<!-- window.open() 3 -->
+<!--
+function winOpen() {
+	window.open("http://www.naver.com", "naver", "location=yes, width=400, height=300");	
+}
+//-->
+
+<!-- window.open() 4 -->
+<!--
+function fullOpen() {
+	window.open("http://www.naver.com", "naver", "fullscreen");	
+}
+function channelOpen() {
+	window.open("http://www.naver.com", "naver", "channelmode");	
+}
+//-->
+</script>
+</head>
+<body>
+<!-- window.open() 2 -->
+<input type=button oncluck="winOpen();" value="옵션없이 팝업윈도우 열기">
+
+<!-- window.open() 4 -->
+<input type=button oncluck="fullOpen();" value="fullOpen">
+<p>fullscreen 윈도우를 닫으려면 Alt+F4키를 누르세요
+<p>
+<input type=button oncluck="channelOpen()" value="channelOpen">
+
+</body>
+</html>

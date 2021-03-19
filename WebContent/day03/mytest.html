@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <SCRIPT>태그의 사용 -->
+<script type="text/javascript">
+	자바 스크립트 코드
+</script>
+</head>
+<body>
+<!-- document.write() -->
+<script>
+<!-- 
+document.write("안녕하세요? 자바스크립트를 공부하는 중입니다");
+//-->
+</script>
+
+<!-- alert() -->
+<script>
+<!-- 
+alert("안녕하세요?/n자바스크립트를 공부하는 중입니다");
+//-->
+</script>
+
+<!-- confirm() -->
+<script>
+<!--
+yesorno = confirm("당신은 남자분 이시군요. 그렇죠?")
+if(yesorno == true)
+	document.write("당신은 <font color=red>남성</font>입니다")
+else
+	document.write("당신은 <font color=blue>여성</font>입니다")
+//-->
+</script>
+
+<!-- prompt() -->
+<script>
+<!-- 
+name = prompt("손님의 이름을 적어주세요", "나그네")
+document.write("<font color=blue>" + name + "</font>님 감사합니다")
+//-->
+</script>
+
+<!-- 이벤트 핸들러 예제 1 -->
+<input type="button" onclick="alert('버튼을 클릭 하였습니다')"; value="클릭 하세요">
+
+<!-- 이벤트 핸들러 예제 2 -->
+<input type="button" onclick="document.bgColor = 'gold'"; value="클릭 하세요">
+
+<!-- 이벤트 핸들러 예제 3 -->
+<body onload="alert('문서가 로딩되면 이 창이 뜹니다')">
+</body>
+
+<!-- 자바 스크립트의 자료형 예제 -->
+<!-- 
+document.write("안녕하세요?<br>")
+document.write("제 이름은 \"홍길동\" 입니다")
+//-->
+
+<!-- 자바 스크립트의 변수 활용 예제 -->
+<!-- 
+var myName = "홍길동", mySchool = "한국대학교", myHome = "http://www.daum.net"
+document.write("나의 이름은: " + myName + ", 나의 학교는: " + mySchool + "이며, 홈페이지는: " + myHome + " 입니다");
+//-->
+
+<!-- 연산자 -->
+<!-- 산술연산자 -->
+<!-- 
+var num1 = 5, num2 = 3;
+document.write("num1 + num2 = " + (num1 + num2) + "<br>");
+document.write("num1 - num2 = " + (num1 - num2) + "<br>");
+document.write("num1 * num2 = " + (num1 * num2) + "<br>");
+document.write("num1 / num2 = " + (num1 / num2) + "<br>");
+document.write("num1 % num2 = " + (num1 % num2) + "<br>");
+//-->
+
+<!-- 관계연산자 -->
+<!-- 
+var num1 = 5, num2 = 3;
+document.write("num1=5이고, num2=3 일때 <br><br>");
+document.write("num1 > num2 연산의 결과는 " + (num1 > num2) + "<br>");
+document.write("num1 >= num2 연산의 결과는 " + (num1 >= num2) + "<br>");
+document.write("num1 < num2 연산의 결과는 " + (num1 < num2) + "<br>");
+document.write("num1 <= num2 연산의 결과는 " + (num1 <= num2) + "<br>");
+document.write("num1 == num2 연산의 결과는 " + (num1 == num2) + "<br>");
+document.write("num1 != num2 연산의 결과는 " + (num1 != num2) + "<br>");
+//-->
+
+<!-- 조건연산자 -->
+<!-- 
+var num1 = 5, num2 = 3;
+num1 > num2 ?
+document.write("num1이 num2보다 큽니다") : document.write("num2가 num1보다 큽니다")
+//-->
+
+<!-- 논리연산자 -->
+<!-- 
+a = 3;
+document.write("a는 2보다 작은 수인가? : " + (a < 2) + "<br>");
+document.write("a는 2보다 큰 수인가? : " + (a < 2) + "<br>");
+document.write("a는 2보다 크며, 5보다 작은 수인가? : " + (a < 2 < 5) + "<br>");
+document.write("a는 3의 배수이거나 5의 배수인가? : " + (a % 3 == 0 || a % 5 == 0) + "<br>");
+document.write("a는 3의 배수이면서 5의 배수인가? : " + (a % 3 == 0 && a % 5 == 0) + "<br>");
+document.write("a는 4가 아닌가? : " + (a != 4) + "<br>");
+//-->
+
+<!-- 증감 연산자 -->
+<!-- 
+a = 3;
+document.write("a = 3일 때,<br>");
+document.write("++a는 ==> ", ++a, "<br>");
+document.write("--a는 ==> ", --a, "<br>");
+//-->
+
+<!-- if문 -->
+<!-- 
+answer = prompt("숫자를 입력해 주세요","");
+if(answer > 0) {
+	alert("입력하신 숫자는 양수입니다");
+}
+//-->
+
+<!-- if ~ else문 -->
+<!-- 
+answer = prompt("숫자를 입력해 주세요","");
+if(answer > 0) {
+	alert("입력하신 숫자는 양수입니다");
+} else {
+	alert("입력하신 숫자는 음수입니다");
+}
+//-->
+
+<!-- 다중 if ~ else문 -->
+<!-- 
+answer = prompt("숫자를 입력해 주세요","");
+if(answer < 0) {
+	alert("입력하신 숫자는 음수입니다");
+} else if (0 < answer < 10) {
+	alert("입력하신 숫자는 1보다 크고 10보다 작은 숫자입니다");
+} else {
+	alert("입력하신 숫자는 1에서 10 사이의 숫자입니다");
+}
+//-->
+
+<!-- 다중 switch ~ case문 -->
+<!-- 
+today = new Date();
+weekday = today.getDay();
+switch(weekday) {
+	case 0: document.write("오늘은 일요일입니다<br>좋은 휴일 보내세요"); break;
+	case 1: document.write("오늘은 월요일입니다<br>월요병 주의보 발령!!"); break;
+	case 2: document.write("오늘은 화요일입니다"); break;
+	case 3: document.write("오늘은 수요일입니다"); break;
+	case 4: document.write("오늘은 목요일입니다"); break;
+	case 5: document.write("오늘은 금요일입니다<br>내일은 토요일 이군요"); break;
+	default: document.write("오늘은 즐거운 토요일입니다<br>좋은 계획 있으세요?"); break;
+	}
+//-->
+
+<!-- for문 -->
+<!-- 
+for(i = 0; i <= 100; i++) {
+	document.write(i + "<br>");
+//-->
+
+<!-- while문 -->
+<!-- 
+a = 100;
+while (a <= 110) {
+document.write(a + "\t");
+	a++
+}
+//-->
+
+<!-- do while문 -->
+<!-- 
+a = 100;
+do {
+do {
+	document.write(a + "\t");
+	a++
+}
+while (a <= 110);
+//-->
+
+<!-- break명령문 -->
+<!-- 
+a = 0;
+for(i = 1; i < 100; i++) {
+	if(i == 11) break;
+	a = i + a;
+}
+alert("1부터 10까지의 합은 " + a + "입니다");
+//-->
+
+<!-- Continue명령문 -->
+<!-- 
+a = 0;
+for(i = 1; i < 100; i++) {
+	if(i == 10) continue;
+	a = i + a;
+}
+alert("10을 제외한, 1부터 10까지의 합은 " + a + "입니다");
+//-->
+</body>
+</html>

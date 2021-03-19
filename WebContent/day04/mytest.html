@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+<!-- 자바스크립트 함수 -->
+<!-- 
+document.write("철수님, 안녕하세요? 자바스크립트는 정말 재미있습니다.<br>");
+document.write("영희님, 안녕하세요? 자바스크립트는 정말 재미있습니다.<br>");
+document.write("숙희님, 안녕하세요? 자바스크립트는 정말 재미있습니다.<br>");
+document.write("길동님, 안녕하세요? 자바스크립트는 정말 재미있습니다.<br>");
+document.write("영자님, 안녕하세요? 자바스크립트는 정말 재미있습니다.<br>");
+document.write("순희님, 안녕하세요? 자바스크립트는 정말 재미있습니다.<br>");
+document.write("태희님, 안녕하세요? 자바스크립트는 정말 재미있습니다.<br>");
+document.write("춘향님, 안녕하세요? 자바스크립트는 정말 재미있습니다.<br>");
+document.write("몽룡님, 안녕하세요? 자바스크립트는 정말 재미있습니다.<br>");
+document.write("현서님, 안녕하세요? 자바스크립트는 정말 재미있습니다.<br>");
+//-->
+
+<!-- 함수를 이용한 경우 -->
+<!-- 
+function greeting(n_ame) {
+	document.write(n_ame + " 님, 안녕하세요? 자바 스크립트는 정말 재미있습니다<br>")
+}
+greeting("철수");
+greeting("영희");
+greeting("숙희");
+greeting("길동");
+greeting("영자");
+greeting("순희");
+greeting("태희");
+greeting("춘향");
+greeting("몽룡");
+greeting("현서");
+//-->
+
+<!-- 함수 호출 1 -->
+<!-- 
+function greeting1() {
+	alert("안녕하세요?")
+}
+//-->
+
+<!-- 인수를 사용한 함수 사용법 -->
+<!-- 
+function greeting2() {
+	alert(n_ame + " 님, 안녕하세요? 자바 스크립트는 정말 재미있습니다<br>")
+}
+//-->
+
+<!-- 인수를 사용한 함수 사용법 -->
+<!-- 
+function greeting3(n_ame) {
+	document.write(n_ame + " 님, 안녕하세요? 자바스크립트는 정말 재미있습니다<br>")
+}
+//-->
+
+<!--자바스크립트의 팝업창을 열어주는 메소드를 사용하는 함수 정의 -->
+<!--
+function openPage(URL) {
+	window.open(URL,'pop','width=300, height=300');
+}
+//-->
+
+<!-- 팝업창을 열어주는 메소드 1 -->
+<!--
+function openPage1(URL) {
+	window.open(URL,'pop','width=300, height=300');
+}
+//-->
+
+<!-- 팝업창을 열어주는 메소드 2 -->
+<!--
+var URL,POP,W,H;
+function openPage2(URL,POP,W,H) {
+	window.open(URL,POP,'width='+W+',height='+H+'');
+}
+//-->
+
+<!-- return 명령문 -->
+<!--
+function Hap() {
+	var a=1, b=2, c=3, d=4;
+	return a+b+c+d;
+}
+alert("a+b+c+d=" + Hap() + " 입니다");
+//-->
+
+<!-- 내장함수 - eval 함수 1 -->
+<!--
+myVar = "50*3+7";
+document.write(myVar + " = " + eval(myVar) + " 입니다");
+//-->
+
+<!-- eval 함수 2 -->
+<!--
+myVar = "document.myForm.myElement' + ',value'";
+myVar2 = eval(myVar);
+document.write(myVar + " 를 변환하면 " + myVar2 + " 가 됩니다.");
+//-->
+
+<!-- escape() 함수와 unescape() 함수 -->
+<!--
+document.write("escape('우리나라') ===>" + escape('우리나라') + "<br>");
+document.write("escape('korea') ===>" + escape('korea') + "<br>");
+document.write("escape('#$%^') ===>" + escape('#$%^') + "<br>");
+document.write("escape('1234') ===>" + escape('1234') + "<br>");
+document.write("escape('*@-_+./') ===>" + escape('*@-_+./') + "<br>");
+document.write("escape('%uC6B0%uB9AC%uB098%uB77C') ===>" + escape('%uC6B0%uB9AC%uB098%uB77C') + "<br>");
+document.write("escape('#23#24#25#5E') ===>" + escape('#23#24#25#5E') + "<br>");
+//-->
+
+<!-- isFinite()함수와 inNan() 함수 -->
+<!--
+document.write("isFinite(12345) ===>" + isFinite(12345) + "<br>");
+document.write("isFinite('12345') ===>" + isFinite('12345') + "<br>");
+document.write("isFinite(12.345) ===>" + isFinite(12.345) + "<br>");
+document.write("isFinite(5+6*7) ===>" + isFinite(5+6*7) + "<br>");
+document.write("isFinite(012345) ===>" + isFinite(012345) + "<br>");
+document.write("isFinite('우리나라') ===>" + isFinite('우리나라') + "<br>");
+document.write("isFinite('korea') ===>" + isFinite('korea') + "<br>");
+document.write("isFinite('12345우리나라') ===>" + isFinite('12345우리나라') + "<br>");
+//-->
+<!--
+document.write("isNaN('12345') ===>" + isNaN('12345') + "<br>");
+document.write("isNaN(12345) ===>" + isNaN(12345) + "<br>");
+document.write("isNaN('우리나라') ===>" + isNaN('우리나라') + "<br>");
+//-->
+
+<!-- Number() 함수와 String() 함수 -->
+<!--
+document.write("Number('33') + Number('55') ===> " + (Number('33') + Number('55')) + "<br><br>");
+document.wrtie("String(33) + String(55) ===> " + (String(33) + String(55)) + "<br><br>");
+//-->
+
+<!-- parseInt() 함수 -->
+<!--
+document.write(parseInt('33') + parseInt('55') ===> " + (parseInt('33') + parseInt('55')) + "<br>")
+document.write(parseInt('33.8') + parseInt('33.8') + "<br>")
+document.write(parseInt('33.16') + parseInt('33.16')+ "<br>")
+document.write(parseInt('worldcup2002') + parseInt('world2002') + "<br>")
+document.write(parseInt('2002worldcup') + parseInt('2002worldcup') + "<br>")
+document.write(parseInt('33') + parseInt('55.123') ===> " + (parseInt('33') + parseInt('55.123')) + "<br>")
+//-->
+
+<!-- parseFloat() 함수 -->
+<!--
+document.write("parseFloat('33') + parseFloat('55') ===> " + (parseFloat('33') + parseFloat('55')) + "<br>");
+document.write("parseFloat('12.345.678') + parseFloat('12.345.678') + "<br>");
+document.write("parseFloat('12.345e3') + parseFloat('12.345e3') + "<br>");
+document.write("parseFloat('worldcup2002') + parseFloat('worldcup2002') + "<br>");
+document.write("parseFloat('2002worldcup') + parseFloat('2002worldcup') + "<br>");
+document.write("parseFloat('33') + parseFloat('55.123') ===> " + (parseFloat('33') + parseFloat('55.123')) + "<br>");
+//-->
+</script>
+</head>
+<body>
+<!-- 함수 호출 1 -->
+<body onLoad="greeting1()">
+페이지를 열면 인사를 합니다.
+
+<!-- 함수 호출 2 -->
+<p><input type=button onClick="greeting1()" value="클릭 해 보세요">
+<p><a href="#" on mouserOver="greeting1()">마우스를 대어보세요</a>
+<p><img src="/myhtml/images/background01.gif" onClick="greeting1()" alt="클릭 해 보세요">
+
+<!-- 인수를 사용한 함수 사용법 -->
+<p><a href="#" onClick="greeting('철수')">철수님께 인사하기</a>
+<p><a href="#" onClick="greeting('영희')">영희님께 인사하기</a>
+<p><a href="#" onClick="greeting('미숙')">미숙님께 인사하기</a>
+
+<!--자바스크립트의 팝업창을 열어주는 메소드를 사용하는 함수 사용법 -->
+<p><a href="#" onClick="greeting('미숙')">미숙님께 인사하기</a>
+
+<!-- 팝업창을 열어주는 메소드 1 -->
+<p><a href="#" onClick="openPage1('http://www.kgitbank.co.kr')">KG 아이티뱅크 홈페이지 열기</a>
+<p><a href="#" onClick="openPage1('http://www.naver.com')">네이버 홈페이지 열기</a>
+<p><a href="#" onClick="openPage1('http://www.daum.net')">다음 아이티뱅크 홈페이지 열기</a>
+
+<!-- 팝업창을 열어주는 메소드 2 -->
+<p><a href="#" onClick="openPage2('http://www.kgitbank.co.kr','one','400','500')">KG 아이티뱅크 홈페이지 열기</a>
+<p><a href="#" onClick="openPage2('http://www.naver.com','two','200','400')">네이버 홈페이지 열기</a>
+<p><a href="#" onClick="openPage2('http://www.daum.net','three','500','100')">다음 아이티뱅크 홈페이지 열기</a>
+</body>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 1. HTML문서에 CSS를 사용하는 3가지 방법 -->
+<!-- (1) 외부 스타일 시트 -->
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+
+<!-- (2) 내부 스타일 시트 -->
+<style type="text/css">
+<!--
+body {
+	font-size: 9pt;
+}
+//
+-->
+</style>
+</head>
+<body>
+	<!-- (3) HTML태그 내에 스타일 지정 -->
+	<p style="color: gray;">이 문단의 색상은 회색으로 지정됩니다.</p>
+
+	<!-- 2. CSS 문법 -->
+	<!-- 문단(P)의 색상을 지정하는 설정 -->
+	<style type="text/css">
+<!--
+p {
+	color: red;
+	width: 200
+}
+//
+-->
+</style>
+	<p>이 문단</p>
+
+	<!-- 선택자 역시도 추가 가능 (기호를 사용)  -->
+	<style type="text/css">
+<!--
+p, td {
+	color: blue;
+	width: 200
+}
+//
+-->
+</style>
+	<p class="td">이 문단</p>
+
+	<!-- 3. 클래스와 아이디 -->
+	<!-- (1-1) 클래스로 지정 가능 -->
+	<style type="text/css">
+<!--
+p.red {
+	color: red
+}
+//
+-->
+</style>
+	<p>일반적인 문단입니다.</p>
+	<p class="red">이 문단</p>
+
+	<!-- (1-2) 특정 HTML 요소에 적용시키지 않고 독립적으로 클래스 사용 가능 -->
+	<style type="text/css">
+<!--
+.red {
+	color: red
+}
+//
+-->
+</style>
+	<h3 class="red">소제목에도 red 클래스를 지정합니다.</h3>
+	<p class="red">red라는 이름의 클래스가 지정된 문단입니다.</p>
+
+	<!-- (2) 아이디를 이용해서 정의 가능 (아이디는 # 이용) -->
+	<style type="text/css">
+<!--
+#red {
+	color: red
+}
+//
+-->
+</style>
+	<p id=red">이 문단의 id는 red입니다.</p>
+	<p>일반적인 문단입니다</p>
+
+	<!-- 4. CSS 주석 -->
+	<style type="text/css">
+<!--
+.red {
+	color: red
+}
+//
+-->
+</style>
+	<p class="red">이 문단의 id는 red입니다</p>
+	<p>일반적인 문단입니다.</p>
+
+	<!-- (1) CSS 텍스트 color -->
+	<!-- color 속성을 이용하여 텍스트의 색상을 지정할 수 있습니다. -->
+	<p style="color: red">이 문단은 붉은색으로 지정됩니다.</p>
+
+	<!-- 한 문단 전체에 지정하지 않고 일부에만 색상을 지정하려면 <span>태그를 사용하여 지정하면 됩니다. -->
+	<p>
+		문단 전체의 색을 지정하지 않고 <span style="color: red">일부에만</span> 색을 지정할 수 있습니다.
+	</p>
+
+	<!-- 테이블 안에 사용이 가능합니다 -->
+	<table>
+		<tr>
+			<td style="color: red">이 셀안의 텍스트는 붉은색으로 지정됩니다.</td>
+		</tr>
+	</table>
+
+	<!-- 하이퍼링크의 색상을 지정할 수도 있습니다. -->
+	<style type="text/css">
+a {
+	color: red
+}
+
+a:hover {
+	color: green
+}
+</style>
+	<p>
+		<a href="http://club.cyworld.com/javaline">자바라인</a>은 홈페이지 제작을 위한 가이드
+		역할을 합니다
+	</p>
+
+	<!-- (2) CSS 텍스트 direction -->
+	<!-- directon 속성을 사용하면 글자의 방향을 지정할 수 있습니다. -->
+	<p style="direction: ltr">direction 속성값을 ltr로 지정한 문단</p>
+	<p style="direction: rtl">direction 속성값을 rtl로 지정한 문단</p>
+
+	<!-- (3) CSS텍스트 background-color -->
+	<!-- background-color 속성을 사용하면 배경색을 지정할 수 있습니다. -->
+	<p style="background-color: yellow;">문단의 배경색을 yellow로 지정</p>
+
+	<!-- color 속성과 마찬가지로 문단의 일부에만 배경색을 지정할려면 <span>태그를 사용하면 됩니다. -->
+	<p>
+		문단의 <span style="background-color: yellow;">일부분의</span> 배경색을 yellow로
+		지정
+	</p>
+
+	<!-- 테이블에 배경색 지정 -->
+	<table border="1">
+		<tr>
+			<td style="background-color: yellow;">background-color</td>
+		</tr>
+		<tr>
+			<td>테이블의 배경색을 지정하는데 사용하는 속성입니다.</td>
+		</tr>
+	</table>
+
+	<!-- (4) CSS 텍스트 line-height -->
+	<!-- 라인의 높이를 지정 -->
+	<p style="line-height: 10px; background-color: gray;">라인의 높이를 10픽셀로
+		지정</p>
+	<p style="line-height: 30px; background-color: gray;">라인의 높이를 30픽셀로
+		지정</p>
+
+	<!-- 줄 사이의 간격을 확인하기 위해 문단의 width를 200픽셀로 좁게 만들어보자. -->
+	<p style="width: 200px;">라인의 높이라기보다는 라인사이의 간격으로 보는 것이 좋습니다. 배경색을
+		지정하지 않은 경우 텍스트보다 line-height를 적게 잡는다고 해도(10px) 화면상에는 아무런 변화를 느끼지 못합니다.
+		그리고 line-height는 %를 단위로 해서 잡는 것이 좋습니다.</p>
+	<p stlye="width:200px; line-height:140%;">이 문단은 line-height 속성 값으로
+		140%를 지정하였습니다. 이렇게 하면 줄 사이의 간격이 어느 정도 떨어지기에 가독성이 좋아집니다. 한글의 경우 일반적으로
+		130% ~ 160%정도로 해서 줄 사이의 간격을 늘리는 것이 좋습니다.</p>
+
+	<!-- (5) CSS 텍스트 letter-spacing -->
+	<!-- letter-spacing 속성은 글자 사이의 간격을 지정합니다. 한글의 경우 이 간격을 조금 좁혀주면 괜찮습니다. -->
+	<p>일반적인 문장</p>
+	<p style="letter-sapcing: -2px">글자사이의 간격을 좁힌 문장</p>
+	<p style="letter-sapcing: 3px">글자사이의 간격을 넓힌 문장</p>
+
+	<!-- (6) CSS text-align -->
+	<!-- text-align 속성은 텍스트의 정렬을 지정합니다. -->
+	<p style="text-align: left">왼쪽 정렬입니다.</p>
+	<p style="text-align: right">오른쪽 정렬입니다.</p>
+	<p style="text-align: center">가운데 정렬입니다.</p>
+	<p style="text-align: justify; width: 200px">자동 줄 바꿈 시 오른쪽 경계선 부분이
+		정리됩니다. 이 부분은 자동 줄 바꿈이 되어야 효과를 확인할 수 있습니다. 그래서 문단의 width 속성을 200픽셀로
+		좁혀보았습니다.</p>
+
+	<!-- (7) CSS text-decoration -->
+	<!-- text-decoration 속성을 사용하면 텍스트를 몇가지 형태로 꾸밀 수 있습니다. -->
+	<p style="text-decoration: underline">underline 속성값이 적용된 예문입니다.</p>
+	<p style="text-decoration: overline">overline 속성값이 적용된 예문입니다.</p>
+	<p style="text-decoration: line-through">line-through 속성값이 적용된
+		예문입니다.</p>
+	<p style="text-decoration: blink">blink 속성값이 적용된 예문입니다.</p>
+	<!-- text-decoration 속성 값을 하이퍼링크의 스타일을 지정하는데 많이 사용 -->
+	<!-- 기본적으로 하이퍼링크는 underline 속성 값이 지정된 상태입니다. 그래서 이 underline을 없애는 경우가 많습니다. -->
+	<style type="text/css">
+a:link {
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration: none;
+}
+
+a:active {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+</style>
+	<a href="http://club.cyworld.com/javaline">자바라인</a>은 초보자를 위한 자바 개발자
+	가이드입니다.
+
+	<!-- (8) CSS text-indent -->
+	<!-- text-indent 속성은 들여쓰기 효과를 지정합니다. 문단의 첫번째 줄을 지정한 길이만큼 들여쓰기 합니다. -->
+	<p>일반적인 문단입니다</p>
+	<p style="text-indent: 20px;">20픽셀 들여쓰기 한 문장입니다. 우리말의 경우 문단의 첫 부분에서
+		들여쓰기를 하므로 text-indent 속성을 사용하면 좋습니다.</p>
+
+	<!-- (9) CSS word-spacing -->
+	<!-- word-spacing 속성을 단어 사이의 간격을 지정합니다. -->
+	<p>일반적인 문단입니다.</p>
+	<p style="word-spacint: 10px;">word-spacing 속성 값으로 10픽셀을 지정한 문단입니다.
+		letter-spacing이 글자사이의 간격을 지정한다면, word-spacing은 단어 사이의 간격을 지정합니다.</p>
+
+	<!-- 6. CSS 배경 (background) -->
+	<!-- (1) CSS 배경색(background-color) 지정 -->
+	<div style="height: 50px; background-color: ivory">ivory배경색이 지정된
+		예제</div>
+
+	<!-- ivory 대신 Hex 코드값을 사용해도 됩니다. -->
+	<div style="height: 50px; background-color: #FFFFF0">ivory배경색이
+		지정된 예제</div>
+
+	<!-- (2) CSS 배경이미지(background-image -->
+	<div style="width: 250px; height: 250px; background-image: url(bg.gif)"></div>
+
+	<!-- (3) CSS 배경이미지의 반복 (background-repeat) -->
+	<div style="width: 250px; height: 250; background-image: url(bg.gif);"></div>
+	<div style="width: 250px; height: 250; background-image: url(bg.gif);"></div>
+
+	<!-- (4) CSS 배경이미지의 위치 (background-position -->
+	<div style="width: 250px; height: 250; background-image: url(bg.gif);"></div>
+
+	<table width="90%" cellpadding="0" cellspacing="0" border="1"
+		align="center"
+		style="background-iamge: url(bg.gif); background-repeat: no-repeat; background-position: center right">
+		<tr height="100">
+			<td width="30%">top left</td>
+			<td width="30%">top center</td>
+			<td width="30%">top rigth</td>
+		</tr>
+		<tr height="100">
+			<td>center left</td>
+			<td>center center</td>
+			<td>center right</td>
+		</tr>
+		<tr height="100">
+			<td>bottom left</td>
+			<td>bottom center</td>
+			<td>bottom right</td>
+		</tr>
+	</table>
+
+	<!-- 7. CSS 글꼴(Font) 스타일 -->
+	<!-- font-family 속성을 이용하면 텍스트의 글꼴을 지정할 수 있습니다. -->
+	<p style="font-family: 돋움">돋움 글꼴로 지정된 텍스트입니다.</p>
+	<p style="font-family: 궁서">궁서 글꼴로 지정된 텍스트입니다.</p>
+	<p style="font-family: 바탕">바탕 글꼴로 지정된 텍스트입니다.</p>
+
+	<!-- font-size 속성을 이용하면 텍스트의 크기를 지정할 수 있습니다. -->
+	<p style="font-size: 10px">10픽셀로 지정된 텍스트입니다.
+	<p style="font-size: 13px">13픽셀로 지정된 텍스트입니다.
+	<p style="font-size: 9pt">9포인트로 지정된 텍스트입니다.
+	<p style="font-size: 10pt">
+		10포인트로 지정된 텍스트입니다.
+
+		<!-- font-weight 속성을 이용하면 텍스트의 굵기를 지정할 수 있습니다. -->
+	<p style="font-weight: normal">일반적인 텍스트입니다.</p>
+	<p style="font-weight: bold">bold를 지정한 텍스트입니다.</p>
+
+	<!-- 8. Box Model - Margins, padding and borders -->
+	<table width="300px" cellpadding="0" cellspacing="0" border="1"
+		align="center">
+		<tr>
+			<td bgcolor="#EEEEEE">
+				<div style="padding: 10px; margin: 10px; border: 1px gray solid;">
+					Box Model을 설명하기 위한 예제</div>
+			</td>
+		</tr>
+	</table>
+
+	<!-- (5) CSS Box Model - 경계선(border) -->
+	<p style="border: 1px gray solid;">border 속성을 이용하면 컨텐츠의 경계선을 지정할 수
+		있습니다.</p>
+
+	<p style="border-width: 1px border-color:gray border-style:solid;">border
+		속성을 이용하면 컨텐츠의 경계선을 지정할 수 있습니다.</p>
+
+	<p style="border-width: 2px border-color:gray border-style:solid;">solid
+		스타일의 경계선</p>
+	<p style="border-width: 2px border-color:gray border-style:dotted;">dotted
+		경계선</p>
+	<p style="border-width: 2px border-color:gray border-style:dashed;">dashed
+		경계선</p>
+	<p style="border-width: 2px border-color:gray border-style:double;">double
+		경계선</p>
+
+	<!-- 9. CSS 리스트(list) -->
+	<ul>
+		<li style="list-style-type: disc">disc 타입의 리스트
+		<li style="list-style-type: circle">circle 타입의 리스트
+		<li style="list-style-type: square">square 타입의 리스트
+		<li style="list-style-type: none">none 타입의 리스트
+	</ul>
+
+	<ol>
+		<li style="list-style-type: decimal">decimal 타입의 리스트
+		<li style="list-style-type: lower-roman">lower-roman 타입의 리스트
+		<li style="list-style-type: upper-roman">upper-roman 타입의 리스트
+		<li style="list-style-type: lower-alpha">lower-alpha 타입의 리스트
+		<li style="list-style-type: upper-alpha">upper-alpha 타입의 리스트
+	</ol>
+
+	<ul>
+		<li style="list-style-image: url('market.gif')">이미지를 사용한 리스트
+		<li style="list-style-image: url('market.gif')">이미지를 사용한 리스트
+	</ul>
+
+	<style type="text/css">
+<!--
+* {
+	font-size: 9pt;
+}
+
+.title {
+	color: #004000; font-weight-bold; font-size; 11 pt;
+	padding: 5 0 5 0;
+}
+
+.sub_title {
+	color: #333333; font—weight-bold; font—size; 10 pt;
+	padding: 5 0 5 0;
+}
+
+.str {
+	color: #666666;
+	padding: 5px;
+}
+
+.u_list {margin—top：5px;
+	
+}
+
+.u_list li {line-height-150 %;
+	
+}
+//
+-->
+</style>
+	<div class="title">CSS 선택자(Selector)</div>
+	<div class="str">CSS에서 가장 중요한 개념은 선택자(Selector)라고 할 수 있습니다. 선택자
+		(Selector)가 있어야 선언된 CSS가 어디에 적용될지를 결정할 수 있기 때문입니다. 특히 CSS는 상 속의 개념을
+		가지므로 선택자(Selector)에 대한 확실한 이해가 없이는 CSS> 제대로 활용하지 못합 니 다.</div>
+	<div class="sub_title">선택자(Selector)의 종류</div>
+	<div class="str">선택자(Selector)는 아래와 같이 4개로 나누어볼 수 있습니다.</div>
+	<ul class="u_list">
+		<li>공통 선택자(Universal Selector)
+		<li>타입 선택자(Type Selector)
+		<li>ID 선택자(ID Selector)
+		<li>Class 선택자(Class Selector)
+	</ul>
+	<div class="sub_title">공통 선택자KUniversal Selector)</div>
+	<div class="str">공통 선택자(Universal Selector)는 *로 표현되는 선택자입니다.</div>
+
+	<div style="border: 1px gray solid;">block-level element</div>
+	<div style="border: 1px gray solid;">block-level element</div>
+
+	<span style="border: 1px gray solid;">inline-level elemeny</span>
+	<span style="border: 1px gray solid;">inline-level elemeny</span>
+
+	<table width="400">
+		<tr>
+			<td><div style="">block-level element</div></td>
+			<td><div style="">block-level element</div></td>
+		</tr>
+	</table>
+
+	<table width="90%" cellpadding="5" cellspacing="0" border="1"
+		align="center"
+		style="border—collapse: collapse; border: 1px gray solid;">
+		<tr>
+			<td>border—collapse :collapse;</td>
+		</tr>
+	</table>
+
+	<table width="90%" cellpadding="5" cellspacing="0" border="1"
+		align="center"
+		style="border-collapse: collapse; border: 1px gray solid;">
+		<tr>
+			<td style="" 1pxgraysolid;">HTML</td>
+			<td style="" 1pxgraysolid;">Hypertext Markup Language</td>
+		</tr>
+		<tr>
+			<td style="" 1pxgraysolid;">CSS</td>
+			<td style="" 1pxgraysolid;">Cascading Style Sheet</td>
+		</tr>
+	</table>
+
+	<table width="200" cellpadding="5" cellspacing="2" border="1"
+		align="center">
+		<tr>
+			<td>셀안의 데이터가 한글의 경우 지정한 셀의 크기에 따라서 자연스럽게 줄바꿈이 일어납니다.</td>
+		</tr>
+	</table>
+
+	<table width="200" cellpadding="5" cellspacing="2" border="1"
+		align="center">
+		<tr>
+			<td>http://club.cyworld.com/javaline</td>
+		</tr>
+	</table>
+
+	<table width="200" cellpadding="5" cellspacing="2" border="1"
+		align="center" style="table-layout: fixed;">
+		<tr>
+			<td>http://club.cyworld.com/javaline</td>
+		</tr>
+	</table>
+
+	<table width="200" cellpadding="5" cellspacing="2" border="1"
+		align="center" style="table-layout: fixed; word-break: break-all">
+		<tr>
+			<td>http://club.cyworld.com/javaline</td>
+		</tr>
+	</table>
+
+	<table width="300" border="1">
+		<tr>
+			<td width="150">이름</td>
+			<td width="150">성적</td>
+		</tr>
+	</table>
+	<div style="width: 320px; height: 100px; overflow: auto">
+		<table width="300px" border="1">
+			<tr>
+				<td width="150">홍길동</td>
+				<td width="150">99</td>
+			</tr>
+			<tr>
+				<td width="150">홍길순</td>
+				<td width="150">95</td>
+			</tr>
+			<tr>
+				<td width="150">김개동</td>
+				<td width="150">82</td>
+			</tr>
+			<tr>
+				<td width="150">김철수</td>
+				<td width="150">80</td>
+			</tr>
+			<tr>
+				<td width="150">김영희</td>
+				<td width="150">78</td>
+			</tr>
+			<tr>
+				<td width="150">이철수</td>
+				<td width="150">75</td>
+			</tr>
+			<tr>
+				<td width="150">이영희</td>
+				<td width="150">60</td>
+			</tr>
+		</table>
+	</div>
+
+	<p style="cursor: auto">Auto</p>
+	<p style="cursor: crosshair">Crosshair</p>
+	<p style="cursor: default">Default</p>
+	<p style="cursor: pointern">Pointer</p>
+	<p style="cursor: move">Move</p>
+	<p style="cursor: e-resize">e-resize</p>
+	<p style="cursor: ne-resize">ne—resize</p>
+	<p style="cursor: nw-resize">nw—resize</p>
+	<p style="cursor: n—resize">n—resize</p>
+	<p style="cursor: se-resize">se-resize</p>
+	<p style="cursor: sw—resize">"sw—resize</p>
+	<p style="cursor: s—resize">s-resize</p>
+	<p style="cursor: w—re size">w—resize</p>
+	<p style="cursor: text">text</p>
+	<p style="cursor: wait">wait</p>
+	<p style="cursor: help">help</p>
+
+</body>
+</html>

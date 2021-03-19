@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="11111110;url=http://www.naver.com/">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 줄바꾸는 기능, 엔터는 적용되지 않고 스페이스는 한번만 적용됩니다. -->
+	KG 정보 교육원의 JIn 쌤은 Korean 출신입니다.
+
+	<!-- 하나의 문단을 의미하는 태그 -->
+	<P>하나의 문단내용이 여기에 들어옵니다.</P>
+
+	<!-- 강제 줄 바꿈하는 태그 -->
+	타미리
+	<br> 홈페이지 제작강좌는
+	<br> 아주 쉽습니다.
+
+	<!-- style 속성을 사용하면 좌우 폭을 지정할 수 있기 때문에 <br>태그를 사용하지 않아도 된다. -->
+	<p style="width: 400px;">1 이 강의는 홈페이지 제작 초보자를 대상으로 합니다. 그러므로 가능한 쉬운
+		용어를 일관성 있게 사용하려고 노력하고 있습니다.</p>
+	<p style="width: 400px;">2 이 강의는 홈페이지 제작 초보자를 대상으로 합니다. 그러므로 가능한 쉬운
+		용어를 일관성 있게 사용하려고 노력하고 있습니다.</p>
+
+	<!-- align 속성 (정렬) -->
+	<p>정렬하지 않은 문단은 기본적으로 왼쪽 정렬입니다.</p>
+	<p align="center">가운데 정렬입니다.</p>
+	<p align="right">오른쪽 정렬입니다.</p>
+	<p align="justify">맞춤정렬입니다. 맞춤정렬입니다. 맞춤정렬입니다. 맞춤정렬입니다. 맞춤정렬입니다.
+		맞춤정렬입니다. 맞춤정렬입니다. 맞춤정렬입니다. 맞춤정렬입니다.</p>
+
+	<!-- heading 표제 속성 -->
+	<h1>Heading 1</h1>
+	<h2>Heading 2</h2>
+	<h3>Heading 3</h3>
+	<h4>Heading 4</h4>
+	<h5>Heading 5</h5>
+	<h6>Heading 6</h6>
+
+	<!-- 텍스트 관련 태그 (물리적 태그) -->
+	<i>텍스트</i>
+	<b>텍스트</b>
+	<tt>텍스트</tt>
+	<u>텍스트</u>
+	<s>텍스트</s>
+	<strike>텍스트</strike>
+	<sub>텍스트</sub>
+	<sup>텍스트</sup>
+	<big>텍스트</big>
+	<small>텍스트</small>
+	<br>
+
+	<!-- 텍스트 관련 태그 (논리적 태그) -->
+	<abbr>텍스트</abbr>
+	<acronym>텍스트</acronym>
+	<cite>텍스트</cite>
+	<code>텍스트</code>
+	<dfn>텍스트</dfn>
+	<em>텍스트</em>
+	<kbd>텍스트</kbd>
+	<q>텍스트</q>
+	<samp>텍스트</samp>
+	<strong>텍스트</strong>
+	<var>텍스트</var>
+
+	<!-- FONT 태그 -->
+	<br>
+	<font size="5">텍스트 크기를 지정하는 size 속성</font>
+	<font color="red">텍스트 색상</font>를 지정하는 size 속성
+	<font face="돋움">텍스트 크기를 지정하는 size 속성</font>
+	<font size="5" color="red" face="돋움">텍스트 크기를 지정하는 size 속성</font>
+
+	<!-- 링크 -->
+	<a href="http://www.naver.com">네이버</a>
+	<a href="http://www.naver.com" target="_blank">네이버</a>
+	<a href="http://www.naver.com" target="_blank" title="네이버 홈페이지 열기">네이버</a>
+	<p>
+		<a href="#bottom">문서의 하단으로</a>
+	<p style="height: 600px">스크롤이 되는 효과를 나타내기 위해서 이 문단의 높이를 높게 지정합니다.</p>
+	<p>
+		<a name="bottom">여기가 문서의 하단</a>
+	</p>
+
+	<!-- 이미지 출력 -->
+	<p>
+		<img src="images/totoro.jpg" align="top">align="top"
+	</p>
+	<p>
+		<img src="images/totoro.jpg" align="middle">align="middle"
+	</p>
+	<p>
+		<img src="images/totoro.jpg" align="bottom">align="bottom"
+	</p>
+	<p>
+		<img src="images/totoro.jpg" align="left">align="left"
+	</p>
+	<p>
+		<img src="images/totoro.jpg" align="right">align="right"
+	</p>
+
+	<!-- 테이블 속성 -->
+	<table bgcolor="gray" border="1">
+		<tr>
+			<td>테이블</td>
+		</tr>
+	</table>
+	<table width="240" height="240" background="iamges/background01.gif">
+		<tr>
+			<td align="center">240*240 테이블</td>
+		</tr>
+	</table>
+
+	<table border="1">
+		<tr>
+			<td>1*1 셀</td>
+			<td>1*2 셀</td>
+		</tr>
+		<tr>
+			<td>2*1 셀</td>
+			<td>2*2 셀</td>
+		</tr>
+	</table>
+
+	<table border="1">
+		<tr>
+			<td colspan="2">1*1 셀</td>
+		</tr>
+		<tr>
+			<td>2*1 셀</td>
+			<td>2*2 셀</td>
+		</tr>
+	</table>
+
+	<table border="1">
+		<tr>
+			<td rowspan="2">1*1 셀</td>
+			<td>1*2 셀</td>
+		</tr>
+		<tr>
+			<td>2*2 셀</td>
+		</tr>
+	</table>
+
+	<table cellpadding="10" border="1">
+		<tr>
+			<td>cellpadding 10인 테이블</td>
+		</tr>
+	</table>
+
+	<!-- 리스트 -->
+	HTML 강좌
+	<ol type="A">
+		<li>줄바꾸기</li>
+		<li>헤드라인</li>
+		<li>기본태그</li>
+	</ol>
+
+	<!-- 자동 이동 head  -->
+
+	<!-- 이미지맵 -->
+	<img src="images/imgmap.gif" alt="imgmap.igf" usemap="#001" vorder="0">
+	<map name="001">
+		<area shape="rect" coords="42,41,154,66" href="/01/homepage.jsp"
+			target="_black">
+		<area shape="rect" coords="42,76,152,100" href="/03/html.jsp"
+			target="_black">
+		<area shape="rect" coords="42,113,150,138 href="
+			/05/html2.jsp" target="_black">
+	</map>
+	<iframe src="http://www.kgitbank.co.kr" width="600" height="300"></iframe>
+	<!-- 셀렉트박스 -->
+	<input type="text" name="member_name">
+	<input type="password" name="member_pass">
+	<select name="job">
+		<option value="">직업선택</option>
+		<optgroup label="학생">
+			학생
+			<option value="회사원">회사원</option>
+		</optgroup>
+		<option value="기타">기타</option>
+	</select>
+
+	<form method="get" action="member_confrim.jsp">
+		<!-- 체크박스 -->
+		<input type="checkbox" name="chk_info" value="HTML">HTML
+		<input type="checkbox" name="chk_info" value="CSS">CSS
+		<input type="checkbox" name="chk_info" value="웹디자인">웹디자인
+		<input type="checkbox" name="chk_info" value="HTML">HTML
+		<input type="checkbox" name="chk_info" value="CSS" checked="checked">CSS
+		<input type="checkbox" name="chk_info" value="웹디자인">웹디자인
+
+		<!-- 라디오 -->
+		<input type="radio" name="chk_info" value="HTML">HTML
+		<input type="radio" name="chk_info" value="CSS">CSS
+		<input type="radio" name="chk_info" value="웹디자인">웹디자인
+
+		<!-- 텍스트 글자 제한 -->
+		<input type="text" name="memberName" maxlength="10">
+
+		<!-- 버튼 초기화 -->
+		<input type="reset" value="초기화">
+	</form>
+
+	<!-- 파일 업로드 -->
+	<form action="" method="post" enctype="multipart/form-data" name="">
+		<input type="file" name="FileName">
+	</form>
+
+	<!-- 라벨 -->
+	<label for="html">HTML</label>
+	<input name="checkinfo" type="checkbox" id="html">
+	<label for="css">HTML</label>
+	<input name="checkinfo" type="checkbox" id="css">
+
+	<!-- 리스트 -->
+	<form action="" method="post" enctype="multipart/form-data" name="">
+		<fieldset>
+			<legend>
+				<b>메일링 리스트</b>
+			</legend>
+			<input type=checkbox>html <input type=checkbox>css
+			<input type=checkbox>javascript
+		</fieldset>
+</body>
+</html>
